@@ -1,5 +1,5 @@
 body {
-  font-family:system-ui;
+  font-family:sans-sans-serif;
   font-size: 18px;
 }
 
@@ -14,7 +14,7 @@ body {
 
 
   details ul li {
-  
+
   }
 
   summary {

@@ -68,12 +68,12 @@ function parseFeed(response) {
         contents.feed = feeds[group][index];
         contents.title = contents.title ? contents.title : contents.link;
         contentFromAllFeeds[group].push(contents);
-        
+
         // try to normalize date attribute naming
         contents.items.forEach(item => {
-          const timestamp = new Date(item.pubDate || item.isoDate || item.date).getTime();          
+          const timestamp = new Date(item.pubDate || item.isoDate || item.date).getTime();
           item.timestamp = isNaN(timestamp) ? (item.pubDate || item.isoDate || item.date) : timestamp;
-        });        
+        });
 
       } catch (error) {
         errors.push(feeds[group][index]);
